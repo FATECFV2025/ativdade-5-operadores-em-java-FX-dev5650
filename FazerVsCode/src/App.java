@@ -1,29 +1,37 @@
-import java.util.Scanner;
-
 public class App {
-        //Comentário
-
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in);
-
-        //variável local 
-        String v2;
-        int v1;
-
-        System.out.println("Comando de Saida de Dados");
-        
-        System.out.printf("Informe uma palavra: ");
-        v2 = ler.next();
-
-        System.out.printf("Informe um número: ");
-        v1 = ler.nextInt();
-
-        System.out.printf(v2+" "+v1);
-    }
     public static void main(String[] args) throws Exception {
-        funcao_teste();
+        
+        Operadores op1 = new Operadores();
 
+        //Aritmeticos
+        System.out.println("         Operadores Artiméticos        ");
+        System.out.println(" ");
+        System.out.println("Resultado: "+op1.adicao(10, 6));
+        System.out.println("Resultado: "+op1.subtracao(10, 6));
+        System.out.println("Resultado: "+op1.multiplicacao(10, 6));
+        System.out.println("Resultado: "+op1.divisao(10, 6));
+        System.out.println("Resultado: "+op1.resdiv(10, 6));
+        System.out.println(" ");
+        
+        //Relacionais
+        System.out.println("         Operadores Relacionais        ");
+        System.out.println(" ");
+        System.out.println("Resultado: "+op1.menor(10, 6));
+        System.out.println("Resultado: "+op1.menorouigual(10, 6));
+        System.out.println("Resultado: "+op1.maior(10, 6));
+        System.out.println("Resultado: "+op1.maiorouigual(10, 6));
+        System.out.println("Resultado: "+op1.igual(10, 6));
+        System.out.println("Resultado: "+op1.diferente(10, 6));
+        System.out.println(" ");
+
+        //Lógicos
+        System.out.println("         Operadores Lógicos        ");
+        System.out.println(" ");
+        System.out.println("Resultado: "+op1.logicaOR(10, 6));
+        System.out.println("Resultado: "+op1.logicaAND(6, 6));
+        System.out.println("Resultado: "+op1.logicaNOT(3));
+        System.out.println("Resultado: "+op1.logicaXOR(15, 6));
+        System.out.println(" ");
 
     }
 }
